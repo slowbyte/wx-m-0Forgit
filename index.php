@@ -32,6 +32,8 @@ destroySession();
     <script src="nvpp2/nvpp2NEW.js"></script>
     <script src="nvpp3/nvpp3NEW.js"></script>    
     <script src="modalbox/modal.js"></script>
+    <script src= "findtbl/findtbl-1.js"></script>
+  
 
     <link rel="stylesheet" href="index/newtryG.css">
     <link rel="stylesheet" href="modalbox/modal.css">
@@ -41,10 +43,11 @@ destroySession();
     <link rel="stylesheet" href="nav/nav.css">
     <link rel="stylesheet" href="nvpp1/nvpp1.css">
     <link rel="stylesheet" href="nvpp2/nvpp2.css">
-   <link rel="stylesheet" href="nvpp3/nvpp3.css">
+    <link rel="stylesheet" href="nvpp3/nvpp3.css">
     <link rel="stylesheet" href="nvpp3/page3_1.css">
     <link rel="stylesheet" href="nvpp3/page3.css">
     <link rel="stylesheet" href="nvpp3/alertp3.css">
+    <link rel="stylesheet" href="findtbl/findtbl-1.css">
    
 </head>
 
