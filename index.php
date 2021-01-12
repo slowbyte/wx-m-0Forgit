@@ -214,11 +214,7 @@ destroySession();
                 <div class="title">Email</div>
                 <input class="inleft" id="em"></input>
 
-                <div ><span id="nvpp1sbtn"></span></div>
-                    <script>
-                        //alert('from script1');
-                        //CreatePP1NextBtn(); // temp blocking of this item
-                    </script>
+               <div ><span id="nvpp1sbtn"></span></div>                   
         </form>
         <div id="PP1ErrorBox">
                  <p id="pp1line0"></p>
@@ -257,19 +253,7 @@ destroySession();
 
 
         <div class="nvpp3form" id="nvpp3form">
-       <!-- <div id="row00">
-                 <div id="note">
-                      <p id="note-p"><em><strong>at least one chkbox must be checked in each section!</strong></em></p> 
-                 </div>
-                 <div  id="alrt">
-                       <div id="msg1">
-                            <p class="myp1" id="p1" > ERROR: </p>
-                            <p class="myp1" id="p2" ></p>
-                       </div> 
-                      <button type="button" class="closebtn" id="btnOK">Ok</button>
-                </div>
-        </div> -->
-
+    
         <div id="row11">
             <div class="box1" id="br11">GAME   TYPE</div>
             <label class="container">DND SE
@@ -397,80 +381,6 @@ destroySession();
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-      <!--    <div class="maincontentgrid" id="maincontentgrid">        
-      <div id="row00">
-                 <div id="note">
-                      <p id="note-p"><em><strong>at least one chkbox must be checked in each section!</strong></em></p> 
-                 </div>
-                 <div  id="alrt">
-                       <div id="msg1">
-                            <p class="myp1" id="p1" > ERROR: </p>
-                            <p class="myp1" id="p2" ></p>
-                       </div> 
-                      <button type="button" class="closebtn" id="btnOK">Ok</button>
-                </div>
-        </div> 
-        <div id="row11">
-            <div class="box1" id="br11">GAME   TYPE</div>
-            <label class="container">DND SE
-              <input type="checkbox" name="cb1" value="myvalue" id = "gtt1">
-              <span id="chk100" class="checkmark"></span>
-            </label>
-            <label class="container">DND 3.5
-              <input type="checkbox"  name="cb2" id = "gtt2" >
-              <span class="checkmark" id="chk200"></span>
-            </label>
-            <label class="container">Pathfinder
-              <input type="checkbox" name="cb4" id = "gtt4">
-              <span class="checkmark" id="chk300"></span>
-            </label>
-            <label class="container">Other
-              <input type="checkbox" name='cb8' id = "gtt8">
-              <span class="checkmark" id="chk400"></span>
-            </label>
-            <div id="br12"></div>
-          </div>
-</div> -->
-        
-
-      <!--  <containerpp3 class="nvpp3frm" id="nvpp3form">
-              <div id="pp3grid">
-              <div id="row11">
-            <div class="box1" id="br11">GAME   TYPE</div>
-            <label class="container">DND SE
-              <input type="checkbox" name="cb1" value="myvalue" id = "gtt1">
-              <span id="chk100" class="checkmark"></span>
-            </label>
-            <label class="container">DND 3.5
-              <input type="checkbox"  name="cb2" id = "gtt2" >
-              <span class="checkmark" id="chk200"></span>
-            </label>
-            <label class="container">Pathfinder
-              <input type="checkbox" name="cb4" id = "gtt4">
-              <span class="checkmark" id="chk300"></span>
-            </label>
-            <label class="container">Other
-              <input type="checkbox" name='cb8' id = "gtt8">
-              <span class="checkmark" id="chk400"></span>
-            </label>
-            <div id="br12"></div>
-          </div>
-             </div>   
-        </containerpp3> 
-                
-                    <script>
-                        //alert('from script1');
-                        //CreatePP1NextBtn(); // temp blocking of this item
-                    </script>  -->
        
      <!-- ================== Profile Clked HTML END      =============== =================== -->
    <!--  <button   type ="button" id="butclosePP3" onclick="nvClosePP1()"; href="javascript:void(0);">CzLOSE</button> -->
