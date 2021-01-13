@@ -72,7 +72,6 @@ if (errors)
 //================= BEGIN regChkUsernameTaken() ===================================
 function regChkUsernameTaken(entries)
 {
-  //alert(entries);
   //var usernameOrig = entries[3]; 
   var dbHost = "localhost";
   //var dbHost = "74.207.235.136";
@@ -114,25 +113,25 @@ function regChkUsernameTaken(entries)
       {        
           //alert(datax);
           loopRan = false;
-
-          if(retned == false || retned == undefined || retned == null || retned == "false" || retned == "undefined" || retned == "null")
+          //////alert("ret[8] & chk4usertaken...   " + retned[8] + " / " +chk4usertaken );
+          if(retned[8] == chk4usertaken)
+          {                 
+                     document.getElementById('modal-content').style.border = "4px solid red";    
+                     document.getElementById('s1').style.color = "red";  
+                     var data = [];
+                     data[0] = "ERROR: please correct...";
+                     data[1] =  "USERNAME TAKEN: <br><br>"+ "username... " + document.getElementById('run').value.trim()  + "  ...is already taken... ";
+                     //data[1] =  "USERNAME TAKEN: <br><br>"+ "username... " + retned[7]  + "  ...is already taken... ";
+                     data[2] =  "";
+                     data[3] =   "";
+                    displayModal( data);     
+          }
+          else if(retned == false || retned == undefined || retned == null || retned == "false" || retned == "undefined" || retned == "null")
           {
             //alert("username   IS available");    
             regChkEmailTaken(entries) ;        
           }
-          else if(retned[13] == chk4usertaken)
-          {
-            //alert("username  " + usernameOrig + " IS NOT available");
-            document.getElementById('modal-content').style.border = "4px solid red";    
-            document.getElementById('s1').style.color = "red";  
-            var data = [];
-            data[0] = "ERROR: please correct...";
-            data[1] =  "USERNAME TAKEN: <br><br>"+ "username... " + document.getElementById('run').value.trim()  + "  ...is already taken... ";
-            //data[1] =  "USERNAME TAKEN: <br><br>"+ "username... " + retned[7]  + "  ...is already taken... ";
-            data[2] =  "";
-            data[3] =   "";
-           displayModal( data);     
-          }
+
       }       
     }, timeout);
     retned = ajaxReg($dbValues);
@@ -192,7 +191,7 @@ function regChkEmailTaken(entriesdata)
             //run next function now....
             regAddNewUser(entriesdata);
           }          
-          else if(retned[12] == chk4emailtaken)
+          else if(retned[7] == chk4emailtaken)
           {
             document.getElementById('modal-content').style.border = "4px solid red";    
             document.getElementById('s1').style.color = "red";  
