@@ -1,3 +1,4 @@
+var currentFindTblpage = "0";
 var currentlyLoggedIn = "";
 var username = "";
 var loopRan =  false;

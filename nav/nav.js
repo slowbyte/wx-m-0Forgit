@@ -297,4 +297,17 @@ if(dothese == "all" || dothese == "PP123")
  }
 }
 
+function chooseWhichFindTblpage()
+{
+  if(currentFindTblpage == 0 || currentFindTblpage == 1)
+  {
+    //objNAVnvpp2form.style.display = "none";
+    //objNAVnvpp3form.style.display = "none";    
+    FTpg1Run();
+  }
+
+
+
+}
+
 

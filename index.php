@@ -59,7 +59,7 @@ destroySession();
             <span  id="divmid"><img  id="img1" src="logos/CFtext.png" alt="icon80" width="225" height="300"></span><span id="ver">wx1-m-0<br>findTable</span>
          </div>  <!-- end first 3 rows | end id logos -->
 
-            <div class="gridareas"  id="s11"><a id="a11" onclick="DBCall();" href="javascript:void(0);" >Find a Table</a></div>
+            <div class="gridareas"  id="s11"><a id="a11" onclick="chooseWhichFindTblpage();" href="javascript:void(0);" >Find a Table</a></div>
             <div class="gridareas"  id="s12"><a id="a12" href="index/uc.html">Community</a></div>
             <div class="gridareas"  id="s13"><a id="a13" onclick="displayAbtUs(true);" href="javascript:void(0);">About Us</a></div>
             <div  class="line1"></div>
