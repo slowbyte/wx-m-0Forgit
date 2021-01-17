@@ -5,7 +5,10 @@ function PP1Run()
     objNAVnvpp2form.style.display = "none";
     objNAVnvpp3form.style.display = "none";
     currentPPpage = 1;
+    objNAVnvmc.style.display = "none";
     objNAVnvmc.style.display = "flex";
+    objNAVnvmc.style.borderColor = "blue";
+    objNAVnvmc.style.backgroundColor = "#f0f8ff";
     objNAVnvpp1form.style.display = "flex";
     objNAVnvmct.innerHTML = "EDIT PROFILE PAGE (1 of 3) PREFERENCES ";
     objNAVnvmcp.innerHTML = "all items must be filled in!";

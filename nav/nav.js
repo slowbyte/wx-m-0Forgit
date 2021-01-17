@@ -29,7 +29,7 @@ function objectsInit()
     objNAVnvpp1form = document.getElementById("nvpp1form") ;
     objNAVnvpp2form = document.getElementById("nvpp2form") ;
     objNAVnvpp3form = document.getElementById("nvpp3form") ;
-    objNAVfindtblpage1 = document.getElementById("findtblpage1")
+    objNAVfindtblpage = document.getElementById("findtblpage1")
    // objNAVnvpp1btnnxt = document.getElementById("nvpp1btnnxt") ;
     objA11 = document.getElementById("a11") ;    
     objA12 = document.getElementById("a12") ; 
@@ -182,34 +182,6 @@ document.getElementById('PP3ErrorBox').style.display = "flex";
 return;
 }
 return;
-
-
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("nvclose")[0];
-
-// Show the modalBox
-//var origHeight = $("container").height();
-//alert(origHeight);
-var tempHeight = (objHeightnvmc + 735) ;
-tempHeight = tempHeight + "px";
-//alert("tH = " + tempHeight);
-//objNAVnvmc.style.height = "1042.047px";
-
-objnvModal.style.margin.Top = -100;
-objnvModal.style.display = "flex";
-
-/*btn.onclick = function() {
-  objModal.style.display = "none";
-}*/
-
-// When the user clicks on <span> (x), close the modal
-  //alert("span clked");
-  span.onclick = function()
-  {
-  objnvModal.style.display = "none";
-  objNAVnvmc.style.height = objHeightnvmc;
-  }
 }
 
 function chooseWhichPPpage()
