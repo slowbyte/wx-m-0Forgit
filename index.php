@@ -402,6 +402,14 @@ destroySession();
     <button   type ="button" id="butclosePP1" onclick="nvClosePP1()"; href="javascript:void(0);">CLOSE</button>
 </container>
 
+<!-- ================== Find a Table Clked HTML BEGIN  =============== =================== -->
+<sectionFndTbl class="nvFindTbl" id="findtblpage1">
+
+
+</sectionFndTbl>
+
+<!-- ================== Find a Table Clked HTML END      =============== =================== -->
+
  <!-- =========================== END OF NAV-ITEM-CLKED HTML ====================================== -->
 </section><!-- end gridPart1 -->
 

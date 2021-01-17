@@ -1,0 +1,15 @@
+
+#findtblpage1{
+    display: none;
+    flex-direction: column;   
+    align-items: center;
+    justify-content: right;
+    margin-top: 100px;
+    background-color: white;
+    border: 2px solid blue;
+    border-radius: 8px;
+    width: 50vw;
+    height: 90vh;
+    padding: 1% 7%; 
+    
+}

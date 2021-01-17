@@ -10,6 +10,7 @@ var  objNAVnvmcp = null;
 var objNAVnvpp1form = null;
 var objNAVnvpp2form = null;
 var objNAVnvpp3form = null;
+var objNAVfindtblpage1 = null;
 var nvpp1btncreated = false;
 var nvpp2btncreated = false;
 var nvpp3btncreated = false;
