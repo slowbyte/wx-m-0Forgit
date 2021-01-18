@@ -29,7 +29,7 @@ function objectsInit()
     objNAVnvpp1form = document.getElementById("nvpp1form") ;
     objNAVnvpp2form = document.getElementById("nvpp2form") ;
     objNAVnvpp3form = document.getElementById("nvpp3form") ;
-    objNAVfindtblpage = document.getElementById("findtblpage1")
+    objNAVfindtblpg1 = document.getElementById("findtblpg1")
    // objNAVnvpp1btnnxt = document.getElementById("nvpp1btnnxt") ;
     objA11 = document.getElementById("a11") ;    
     objA12 = document.getElementById("a12") ; 

@@ -403,7 +403,7 @@ destroySession();
 </container>
 
 <!-- ================== Find a Table Clked HTML BEGIN  =============== =================== -->
-<sectionFndTbl class="nvFindTbl" id="findtblpage1">
+<sectionFndTbl class="nvFindTbl" id="findtblpg1">
 
 
 </sectionFndTbl>
