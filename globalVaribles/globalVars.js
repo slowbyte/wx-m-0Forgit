@@ -11,6 +11,7 @@ var objNAVnvpp1form = null;
 var objNAVnvpp2form = null;
 var objNAVnvpp3form = null;
 var objNAVfindtblpg1 = null;
+var objNAVfatpanel1 = null;
 var nvpp1btncreated = false;
 var nvpp2btncreated = false;
 var nvpp3btncreated = false;

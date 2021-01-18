@@ -404,7 +404,9 @@ destroySession();
 
 <!-- ================== Find a Table Clked HTML BEGIN  =============== =================== -->
 <sectionFndTbl class="nvFindTbl" id="findtblpg1">
-
+   <div id="fatpanel1"> Fat Panel 1</div>
+   <div id="fatpanel2"> Fat Panel 2</div>
+   <div id="fatpanel3"> Fat Panel 3</div>
 
 </sectionFndTbl>
 

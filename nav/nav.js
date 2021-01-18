@@ -30,7 +30,7 @@ function objectsInit()
     objNAVnvpp2form = document.getElementById("nvpp2form") ;
     objNAVnvpp3form = document.getElementById("nvpp3form") ;
     objNAVfindtblpg1 = document.getElementById("findtblpg1")
-   // objNAVnvpp1btnnxt = document.getElementById("nvpp1btnnxt") ;
+    objNAVfatpanel1 = document.getElementById("fatpanel1");
     objA11 = document.getElementById("a11") ;    
     objA12 = document.getElementById("a12") ; 
     objA13 = document.getElementById("a13") ; 
