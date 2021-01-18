@@ -25,15 +25,16 @@ width: 15vw;
 height: 90vh;
 border: 2px solid red;
 
-grid-template-columns:   repeat( 4 , min-content) ;
+grid-template-columns:   repeat( 4 , 1fr) ;
 grid-template-rows:  repeat( 5, 18.5%);
 grid-gap: 10px;
+
 grid-template-areas: 
-" r1 r2 r3 r4"
-" r1 r2 r3 r4"
-" r1 r2 r3 r4"
-" r1 r2 r3 r4"
-" r1 r2 r3 r4";
+" r1 r1 r2 r2"
+" r1 r1 r2 r2"
+" r3 r3 r4 r4"
+" r3 r3 r4 r4"
+" r5 r5 r6 r6";
 
 }
 #fatpanel2{
