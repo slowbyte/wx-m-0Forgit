@@ -404,7 +404,7 @@ destroySession();
 
 <!-- ================== Find a Table Clked HTML BEGIN  =============== =================== -->
 <sectionFndTbl class="nvFindTbl" id="findtblpg1">
-   <div id="fatpanel1"> 
+  <!-- <div id="fatpanel1"> 
      <div id="r1">R 1</div>
      <div id="r2">R 2</div>
      <div id="r3">R 3</div>
@@ -414,7 +414,14 @@ destroySession();
    </div>  
    <div id="fatpanel2"> Fat Panel 2</div>
    <div id="fatpanel3"> Fat Panel 3</div>
-
+-->
+<div id="tp1"</div>
+     <div id="a1">A 1</div>
+     <div id="a2">A 2</div>
+     <div id="a3">A 3</div>
+     <div id="a4">A 4</div>
+     <div id="a5">A 5</div>
+     <div id="a6">A 6</div>
 </sectionFndTbl>
 
 <!-- ================== Find a Table Clked HTML END      =============== =================== -->

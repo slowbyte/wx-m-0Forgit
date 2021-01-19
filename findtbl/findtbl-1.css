@@ -16,16 +16,99 @@
 
 }
 
-#fatpanel1{
+/*begin real tests =============================================================*/
+#tp1 /*testpanel1*/
+{
 display: grid;
+position: relative;
+margin-left: 25px;
+top: 6px;
+
+border: 2px solid red;
+grid-template-columns:  400px 200px;
+grid-template-rows:  repeat( 6, 15%);
+gap: 10px;
+
+grid-template-areas: 
+   "a1 l1"
+   "a2 l2"
+   "a3 l3"
+   "a4 l4"
+   "a5 l5"
+   "a6 l6";
+
+}
+#a1{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: aqua;
+    border: 1px solid black;
+    margin-left: 15px;
+    margin-top: 15px;
+    grid-area: a1;
+}
+#a2{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: pink;
+    border: 1px solid black;
+    margin-left: 15px;
+    
+    grid-area: a2;
+}
+#a3{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: green;
+    border: 1px solid black;
+    margin-left: 15px;
+    
+    grid-area: a3;
+}
+#a4{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: rgba(0, 0, 255, 0.438);
+    border: 1px solid black;
+    margin-left: 15px;
+    
+    grid-area: a4;
+}
+#a5{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: purple;
+    border: 1px solid black;
+    margin-left: 15px;
+    
+    grid-area: a5;
+}
+#a6{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: peru;
+    border: 1px solid black;
+    margin-left: 15px;
+  
+    grid-area: a6;
+}
+
+/*end real tests =============================================================*/
+
+#fatpanel1{
+display: none;
 position: relative;
 margin-left: 25px;
 top: 20px;
 width: 15vw;
 height: 90vh;
 border: 2px solid red;
-
-
 grid-template-columns:   repeat( 4 , 1fr) ;
 grid-template-rows:  repeat( 6, 16%);
 gap: 10px;
@@ -39,7 +122,7 @@ grid-template-areas:
 
 }
 #fatpanel2{
-    display: grid;    
+    display: none;    
     position: relative;
     margin-left: 25px;
     top: 20px;
@@ -48,7 +131,7 @@ grid-template-areas:
     border: 2px solid red;
 }
 #fatpanel3{
-    display: grid;
+    display: none;
     position: relative;
     margin-left: 25px;
     top: 20px;
