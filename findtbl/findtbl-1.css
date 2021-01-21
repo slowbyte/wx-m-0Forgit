@@ -23,7 +23,6 @@ display: grid;
 position: relative;
 margin-left: 25px;
 top: 6px;
-
 border: 2px solid red;
 grid-template-columns:  400px 200px;
 grid-template-rows:  repeat( 6, 15%);
@@ -36,66 +35,37 @@ grid-template-areas:
    "a4 l4"
    "a5 l5"
    "a6 l6";
-
 }
-#a1{
+.a{
     display: flex;
     align-items: center;
     justify-content: left;
+    border: 3px solid green;
+    margin-left: 15px; 
+}
+#a1{   
+    margin-top: 10px;
     background-color: aqua;
-    border: 1px solid black;
-    margin-left: 15px;
-    margin-top: 15px;
     grid-area: a1;
 }
-#a2{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    background-color: pink;
-    border: 1px solid black;
-    margin-left: 15px;
-    
+#a2{   
+    background-color: pink;   
     grid-area: a2;
 }
-#a3{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    background-color: green;
-    border: 1px solid black;
-    margin-left: 15px;
-    
+#a3{    
+    background-color: rgb(171, 240, 171);      
     grid-area: a3;
 }
-#a4{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    background-color: rgba(0, 0, 255, 0.438);
-    border: 1px solid black;
-    margin-left: 15px;
-    
+#a4{   
+    background-color: rgba(0, 0, 255, 0.438);  
     grid-area: a4;
 }
-#a5{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    background-color: purple;
-    border: 1px solid black;
-    margin-left: 15px;
-    
+#a5{   
+    background-color: purple;   
     grid-area: a5;
 }
-#a6{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    background-color: peru;
-    border: 1px solid black;
-    margin-left: 15px;
-  
+#a6{    
+    background-color: peru;   
     grid-area: a6;
 }
 

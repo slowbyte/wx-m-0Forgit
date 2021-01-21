@@ -416,12 +416,12 @@ destroySession();
    <div id="fatpanel3"> Fat Panel 3</div>
 -->
 <div id="tp1"</div>
-     <div id="a1">A 1</div>
-     <div id="a2">A 2</div>
-     <div id="a3">A 3</div>
-     <div id="a4">A 4</div>
-     <div id="a5">A 5</div>
-     <div id="a6">A 6</div>
+     <div class= "a" id="a1">A 1</div>
+     <div class= "a" id="a2">A 2</div>
+     <div class= "a" id="a3">A 3</div>
+     <div class= "a" id="a4">A 4</div>
+     <div class= "a" id="a5">A 5</div>
+     <div class= "a" id="a6">A 6</div>
 </sectionFndTbl>
 
 <!-- ================== Find a Table Clked HTML END      =============== =================== -->
