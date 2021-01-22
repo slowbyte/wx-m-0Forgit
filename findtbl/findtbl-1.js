@@ -1,4 +1,41 @@
+class CommonGridElements
+{
+    constructor(commonElemStr)
+        {
+            alert("in CCE constructor");
+            this.first = commonElemStr[0];
+            this.second = commonElemStr[1];
+            this.third = commonElemStr[2];           
+            var i = 0;
+            for( i = 0; i < commonElemStr.length; i++)
+            {
+                 alert(commonElemStr[i]);
+            }
+        }   
+        
+        
+}
+class SpecificGridElements extends CommonGridElements
+{
+    constructor(commonElemStr, specificElemStr)
+    {
+        alert("in SCE constructor");
+        super(commonElemStr);
+        this.color1 = specificElemStr[0];
+        this.color2 = specificElemStr[1];
+        this.color3 = specificElemStr[0];   
+        var i = 0;
+        for( i = 0; i < specificElemStr.length; i++)
+        {
+             alert(specificElemStr[i]);
+        }
 
+    }
+}
+
+let area1 = new SpecificGridElements("abc", "rwb");
+
+//===========================================================================
 function FTpg1Run()
 {
     //alert("FTpg1Run()");
