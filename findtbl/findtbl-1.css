@@ -37,7 +37,7 @@ grid-template-areas:
    "a6 l6";
 }
 .a{
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: left;
     border: 3px solid green;
