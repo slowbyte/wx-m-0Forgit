@@ -23,6 +23,7 @@ class SpecificGridElements extends CommonGridElements
         this.presentposition = specificElemArray[2];   
         this.ID = specificElemArray[3];
         this.pID = specificElemArray[4];
+        this.createdObj = specificElemArray[5];
         var elem = document.getElementById(this.ID);
         var elemTitle = document.getElementById(this.pID);
         elem.style.backgroundColor = this.backgndcolor; 
@@ -31,15 +32,19 @@ class SpecificGridElements extends CommonGridElements
         var i = 0;
         for( i = 0; i < specificElemArray.length; i++)
         {
-            //alert(specificElemArray[i]);
+           // alert("i = " + i + " / " + specificElemArray[i]);
         }     
-        this.setInitProperties();   
+       // this.setInitProperties();   
     }
     
     setInitProperties()
     {
+        //CHANGE BKGROUND COLOR OF a2 obj
+        var newid = "a" + 2;
+        var area = document.getElementById(newid);
+        area.style.backgroundColor = "gray";
         //console.log("In set properties");
-        alert(this.backgndcolor);
+        //alert(this.backgndcolor);
         //var elem = document.getElementById(ID);
         //elem.style.innerHTML = "HELLO";
 
@@ -53,29 +58,40 @@ function FTpg1Run()
     //alert("FTpg1Run()");
     currentFindTblpage = 1;
     objNAVfindtblpg1.style.display = "flex";
-    var commonElem = ["a", "b", "c"];
-    var specificElem = ["Game Type", "aqua", 1, "a1", "title1"];
+    
 fatCreateButtons();
 //document.getElementById("title").innerHTML = specificElem[0] + " " + specificElem[1] + " is " + specificElem[2];
 //alert(specificElem[0] + " / " + specificElem[2] + " / " + specificElem[1]);
+var commonElem = ["a", "b", "c"];
+var specificElem = ["Game Type", "aqua", 1, "a1", "title1", "area1"];
+    let area1 = new SpecificGridElements(commonElem, specificElem)
+var specificElem = ["Game Style", "red", 2, "a2", "title2", "area2"];
+    let area2 = new SpecificGridElements(commonElem, specificElem);    
+var specificElem = ["Group Size", "rgb(171, 240, 171)", 3, "a1", "title3", "area3"];
+    let area3 = new SpecificGridElements(commonElem, specificElem)
+var specificElem = ["When Available", "rgba(0 ,0 , 255, 0.438)", 4, "a4", "title4", "area4"];
+    let area4 = new SpecificGridElements(commonElem, specificElem);  
 
-    let area1 = new SpecificGridElements(commonElem, specificElem);
-    var specificElem = ["Game Style", "red", 2, "a2", "title2"];
-    let area2 = new SpecificGridElements(commonElem, specificElem);
-     //clkClassA();
-  //
+var specificElem = ["Hold 1", "purple", 5, "a5", "title5", "area5"];
+    let area5 = new SpecificGridElements(commonElem, specificElem)
+var specificElem = ["Hold 2", "peru", 6, "a6", "title6", "area6"];
+    let area6 = new SpecificGridElements(commonElem, specificElem);      
+ 
 
-   //area1.setInitProperties();
+  // area1.setInitProperties();
 }
 
 function fatCreateButtons()
-   {   
-    //alert("cpp1nxtbtn_1");
+ {
+     var i = 1;
+     for(i = 1;  i <= 6; i++)   
+     {
     buttonU = (document.createElement('input'));
     buttonU.type = "button";
     buttonU.name = 'fatUp';
     buttonU.className = "fatUP";
-    buttonU.id = "fatUp1";
+    buttonU.id = "fatUp" + i;
+    //alert("but id = " + buttonU.id);
     buttonU.value = "  UP  ";
     buttonU.style.backgroundColor = "white"; 
     buttonU.style.width = "60px" ;
@@ -83,56 +99,36 @@ function fatCreateButtons()
     buttonU.style.marginTop = "5px";
     buttonU.style.marginLeft = "310px";
     buttonU.style.marginBottom = "10px";
-    a1.appendChild(buttonU);
     buttonU.addEventListener("click", fatEventUP);
 
-   buttonD = (document.createElement('input'));
-   buttonD.type = "button";
-   buttonD.name = 'fatUp';
-   buttonD.className = "fatDWN";
-   buttonD.id = "fatDwn1";
-   buttonD.value = "  DWN  ";
-   buttonD.style.backgroundColor = "white"; 
-   buttonD.style.width = "60px" ;
-   buttonD.style.height = "25px";
-   buttonD.style.marginTop = "0px";
-   buttonD.style.marginLeft = "310px";
-   buttonD.style.marginBottom = "10px";
-   a1.appendChild(buttonD);
-   buttonD.addEventListener("click", fatEventDWN);
-   //=========================================================
-   buttonU = (document.createElement('input'));
-   buttonU.type = "button";
-   buttonU.name = 'fatUp';
-   buttonU.className = "fatUP";
-   buttonU.id = "fatUp2";
-   buttonU.value = "  UP  ";
-   buttonU.style.backgroundColor = "white"; 
-   buttonU.style.width = "60px" ;
-   buttonU.style.height = "25px";
-   buttonU.style.marginTop = "5px";
-   buttonU.style.marginLeft = "310px";
-   buttonU.style.marginBottom = "10px";
-   a2.appendChild(buttonU);
-   buttonU.addEventListener("click", fatEventUP);
+    var idStr = "a" + i;
+    //alert("idStr = " + idStr);
+    var appendTo = document.getElementById(idStr);
+    //alert("appendTo = " + appendTo);
+    appendTo.appendChild(buttonU);
 
-  buttonD = (document.createElement('input'));
-  buttonD.type = "button";
-  buttonD.name = 'fatUp';
-  buttonD.className = "fatDWN";
-  buttonD.id = "fatDwn2";
-  buttonD.value = "  DWN  ";
-  buttonD.style.backgroundColor = "white"; 
-  buttonD.style.width = "60px" ;
-  buttonD.style.height = "25px";
-  buttonD.style.marginTop = "0px";
-  buttonD.style.marginLeft = "310px";
-  buttonD.style.marginBottom = "10px";
-  a2.appendChild(buttonD);
-  buttonD.addEventListener("click", fatEventDWN);
-   //==========================================================
-   
+    //=============================
+    buttonD = (document.createElement('input'));
+    buttonD.type = "button";
+    buttonD.name = 'fatDwn';
+    buttonD.className = "fatDWN";
+    buttonD.id = "fatDwn" + i;
+    //alert("but id = " + buttonD.id);
+    buttonD.value = " DOWN ";
+    buttonD.style.backgroundColor = "white"; 
+    buttonD.style.width = "60px" ;
+    buttonD.style.height = "25px";
+    buttonD.style.marginTop = "5px";
+    buttonD.style.marginLeft = "310px";
+    buttonD.style.marginBottom = "10px";
+    buttonD.addEventListener("click", fatEventDWN);
 
+    var idStr = "a" + i;
+    //alert("idStr = " + idStr);
+    var appendTo = document.getElementById(idStr);
+    //alert("appendTo = " + appendTo);
+    appendTo.appendChild(buttonD);
+    }
   }
   
   function fatEventUP()
@@ -142,10 +138,9 @@ function fatCreateButtons()
   function fatEventDWN()
   {
     var parentDiv = this.parentNode;
-   // alert(parentDiv);
     var id = parentDiv.getAttribute("id");
-    alert("button parent id = " +id);
-      alert("fatEventDWN clicked classname =  " + this.className );
+      //alert("button parent id = " +id);
+      alert("fatEventDWN clicked id =  " + this.id );
   }
 
 

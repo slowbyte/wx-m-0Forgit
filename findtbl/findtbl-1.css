@@ -21,7 +21,8 @@
 {
 display: grid;
 position: relative;
-margin-left: 25px;
+margin-left: 235px;
+padding-top: 10px;
 top: 6px;
 border: 2px solid red;
 grid-template-columns:  400px 200px;
@@ -36,22 +37,28 @@ grid-template-areas:
    "a5 l5"
    "a6 l6";
 }
+
 #title1,
-#title2{
+#title2,
+#title3,
+#title4,
+#title5,
+#title6
+{
     position: relative;
     font-size: rem;
     margin-top: 2px; 
     margin-left: 5px;   
 }
+
 .a{
-    display: block;
+    display: inline-block;
     align-items: center;
     justify-content: left;
     border: 3px solid green;
-    margin-left: 15px; 
+    margin-left: 120px;     
 }
-#a1{   
-    margin-top: 10px;
+#a1{      
     /*background-color: aqua;*/
     grid-area: a1;
 }
@@ -60,21 +67,22 @@ grid-template-areas:
     grid-area: a2;
 }
 #a3{    
-    background-color: rgb(171, 240, 171);      
+    /*background-color: rgb(171, 240, 171);      */
     grid-area: a3;
 }
 #a4{   
-    background-color: rgba(0, 0, 255, 0.438);  
+    /*background-color: rgba(0, 0, 255, 0.438);  */
     grid-area: a4;
 }
 #a5{   
-    background-color: purple;   
+    /*background-color: purple;   */
     grid-area: a5;
 }
 #a6{    
-    background-color: peru;   
-    grid-area: a6;
+   /* background-color: peru;   */
+     grid-area: a6;
 }
+
 
 /*end real tests =============================================================*/
 
