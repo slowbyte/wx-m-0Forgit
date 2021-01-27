@@ -36,6 +36,13 @@ grid-template-areas:
    "a5 l5"
    "a6 l6";
 }
+#title1,
+#title2{
+    position: relative;
+    font-size: rem;
+    margin-top: 2px; 
+    margin-left: 5px;   
+}
 .a{
     display: block;
     align-items: center;
@@ -45,11 +52,11 @@ grid-template-areas:
 }
 #a1{   
     margin-top: 10px;
-    background-color: aqua;
+    /*background-color: aqua;*/
     grid-area: a1;
 }
 #a2{   
-    background-color: pink;   
+    /*background-color: pink;   */
     grid-area: a2;
 }
 #a3{    

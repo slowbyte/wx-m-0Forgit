@@ -416,8 +416,12 @@ destroySession();
    <div id="fatpanel3"> Fat Panel 3</div>
 -->
 <div id="tp1"</div>
-     <div class= "a" id="a1"></div>
-     <div class= "a" id="a2"></div>
+     <div class= "a" id="a1">
+        <p id="title1"></p>
+     </div>
+     <div class= "a" id="a2">
+         <p id="title2"></p>
+     </div>
      <div class= "a" id="a3"></div>
      <div class= "a" id="a4"></div>
      <div class= "a" id="a5"></div>
