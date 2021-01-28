@@ -140,29 +140,20 @@ function fatCreateButtons()
     }
   }
   
-  function fatEventUP()
-  {
-      alert("fatEventUP clicked id =  " + this.id);
-  }
-  function fatEventDWN()
-  {
-    var parentDiv = this.parentNode;
-    var id = parentDiv.getAttribute("id");
-      //alert("button parent id = " +id);
-      alert("fatEventDWN clicked id? =  " + this.id );
-  }
-
+ 
   function eventSpecificElem(id)
   {    
+    //alert("in fcn eventSpecificElem");
       var rtn = "";   
       var idNum = parseInt(id[1]); 
+      //alert(idNum);
       switch(idNum)
-       {
+       {         
         case 1:
-            rtn = area1.returnTitle();
+          rtn = area1.returnTitle();
           break;
         case 2:
-            rtn = area2.returnTitle();
+          rtn = area2.returnTitle();
           break;
           case 3:
             rtn = area3.returnTitle();
@@ -182,6 +173,19 @@ function fatCreateButtons()
       }
       alert(rtn);
   }
+
+  function fatEventUP()
+  {
+      alert("fatEventUP clicked id =  " + this.id);
+  }
+  function fatEventDWN()
+  {   
+    var parentDiv = this.parentNode;
+    var id = parentDiv.getAttribute("id");
+      //alert("button parent id = " +id);
+     alert("fatEventDWN clicked id? =  " + this.id );
+  }
+
 
 function clkClassA()
 {

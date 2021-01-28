@@ -416,22 +416,22 @@ destroySession();
    <div id="fatpanel3"> Fat Panel 3</div>
 -->
 <div id="tp1"</div>
-     <div class= "a" id="a1" onclick="eventSpecificElem(id);" href="javascript:void(0);">
+     <div class= "a" id="a1" ondblclick="eventSpecificElem(id);" href="javascript:void(0);">
          <p id="title1"></p>
      </div>
-     <div class= "a" id="a2" onclick="eventSpecificElem(id);" href="javascript:void(0);">
+     <div class= "a" id="a2" ondblclick="eventSpecificElem(id);" href="javascript:void(0);">
          <p id="title2"></p>
      </div>
-     <div class= "a" id="a3" onclick="eventSpecificElem(id);" href="javascript:void(0);">
+     <div class= "a" id="a3" ondblclick="eventSpecificElem(id);" href="javascript:void(0);">
          <p id="title3"></p>
      </div>
-     <div class= "a" id="a4" onclick="eventSpecificElem(id);" href="javascript:void(0);">
+     <div class= "a" id="a4" ondblclick="eventSpecificElem(id);" href="javascript:void(0);">
          <p id="title4"></p>
      </div>
-     <div class= "a" id="a5" onclick="eventSpecificElem(id);" href="javascript:void(0);">
+     <div class= "a" id="a5" ondblclick="eventSpecificElem(id);" href="javascript:void(0);">
          <p id="title5"></p>
      </div>
-     <div class= "a" id="a6" onclick="eventSpecificElem(id);" href="javascript:void(0);">
+     <div class= "a" id="a6" ondblclick="eventSpecificElem(id);" href="javascript:void(0);">
          <p id="title6"></p>
      </div>
 </sectionFndTbl>
