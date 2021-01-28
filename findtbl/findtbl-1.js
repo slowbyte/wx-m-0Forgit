@@ -1,3 +1,9 @@
+var area1;
+var area2;
+var area3;
+var area4;
+var area5;
+var area6;
 class CommonGridElements
 {
     constructor(commonElemArray)
@@ -18,6 +24,7 @@ class SpecificGridElements extends CommonGridElements
     constructor(commonElemArray, specificElemArray)
     {
         super(commonElemArray);
+        this.SEArray = specificElemArray;
         this.title = specificElemArray[0];
         this.backgndcolor = specificElemArray[1];
         this.presentposition = specificElemArray[2];   
@@ -37,17 +44,22 @@ class SpecificGridElements extends CommonGridElements
        // this.setInitProperties();   
     }
     
-    setInitProperties()
+    setInitProperties(id)
     {
         //CHANGE BKGROUND COLOR OF a2 obj
-        var newid = "a" + 2;
-        var area = document.getElementById(newid);
+       // var newid = "a" + 2;
+        var area = document.getElementById(id);
         area.style.backgroundColor = "gray";
+        return area;
         //console.log("In set properties");
         //alert(this.backgndcolor);
         //var elem = document.getElementById(ID);
         //elem.style.innerHTML = "HELLO";
-
+    }
+    returnTitle()
+    {
+        //alert("in fcn returnTitle()"  + " / " + this.SEArray );    
+        return this.SEArray; 
     }
 
 }
@@ -64,20 +76,17 @@ fatCreateButtons();
 //alert(specificElem[0] + " / " + specificElem[2] + " / " + specificElem[1]);
 var commonElem = ["a", "b", "c"];
 var specificElem = ["Game Type", "aqua", 1, "a1", "title1", "area1"];
-    let area1 = new SpecificGridElements(commonElem, specificElem)
+     area1 = new SpecificGridElements(commonElem, specificElem)
 var specificElem = ["Game Style", "red", 2, "a2", "title2", "area2"];
-    let area2 = new SpecificGridElements(commonElem, specificElem);    
+     area2 = new SpecificGridElements(commonElem, specificElem);    
 var specificElem = ["Group Size", "rgb(171, 240, 171)", 3, "a1", "title3", "area3"];
-    let area3 = new SpecificGridElements(commonElem, specificElem)
+     area3 = new SpecificGridElements(commonElem, specificElem)
 var specificElem = ["When Available", "rgba(0 ,0 , 255, 0.438)", 4, "a4", "title4", "area4"];
-    let area4 = new SpecificGridElements(commonElem, specificElem);  
-
+     area4 = new SpecificGridElements(commonElem, specificElem);  
 var specificElem = ["Hold 1", "purple", 5, "a5", "title5", "area5"];
-    let area5 = new SpecificGridElements(commonElem, specificElem)
+     area5 = new SpecificGridElements(commonElem, specificElem)
 var specificElem = ["Hold 2", "peru", 6, "a6", "title6", "area6"];
-    let area6 = new SpecificGridElements(commonElem, specificElem);      
- 
-
+     area6 = new SpecificGridElements(commonElem, specificElem);      
   // area1.setInitProperties();
 }
 
@@ -140,11 +149,39 @@ function fatCreateButtons()
     var parentDiv = this.parentNode;
     var id = parentDiv.getAttribute("id");
       //alert("button parent id = " +id);
-      alert("fatEventDWN clicked id =  " + this.id );
+      alert("fatEventDWN clicked id? =  " + this.id );
   }
 
+  function eventSpecificElem(id)
+  {    
+      var rtn = "";   
+      var idNum = parseInt(id[1]); 
+      switch(idNum)
+       {
+        case 1:
+            rtn = area1.returnTitle();
+          break;
+        case 2:
+            rtn = area2.returnTitle();
+          break;
+          case 3:
+            rtn = area3.returnTitle();
+          break;
+        case 4:
+            rtn = area4.returnTitle();
+          break;
+          case 5:
+            rtn = area5.returnTitle();
+          break;
+        case 6:
+            rtn = area6.returnTitle();
+          break;
 
-
+        default:
+          alert("ERROR");
+      }
+      alert(rtn);
+  }
 
 function clkClassA()
 {
