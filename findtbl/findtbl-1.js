@@ -30,7 +30,9 @@ class SpecificGridElements extends CommonGridElements
         this.presentposition = specificElemArray[2];   
         this.ID = specificElemArray[3];
         this.pID = specificElemArray[4];
-        this.createdObj = specificElemArray[5];
+        this.createdObj; //= specificElemArray[5];
+        //alert(typeof specificElemArray[5]);
+        //alert(typeof this.createdObj);
         var elem = document.getElementById(this.ID);
         var elemTitle = document.getElementById(this.pID);
         elem.style.backgroundColor = this.backgndcolor; 
@@ -43,14 +45,22 @@ class SpecificGridElements extends CommonGridElements
         }     
        // this.setInitProperties();   
     }
+
+    addareax(area)
+    {
+      // alert(area + " / " + typeof area);
+      this.SEArray.push(area);
+      this.createdObj = this.SEArray[5];
+      alert("createdObj = " + this.createdObj);
+    }
     
     setInitProperties(id)
     {
         //CHANGE BKGROUND COLOR OF a2 obj
        // var newid = "a" + 2;
-        var area = document.getElementById(id);
-        area.style.backgroundColor = "gray";
-        return area;
+        var someBlock = document.getElementById(id);
+        someBlock.style.backgroundColor = "gray";
+        return someBlock;
         //console.log("In set properties");
         //alert(this.backgndcolor);
         //var elem = document.getElementById(ID);
@@ -72,21 +82,27 @@ function FTpg1Run()
     objNAVfindtblpg1.style.display = "flex";
     
 fatCreateButtons();
-//document.getElementById("title").innerHTML = specificElem[0] + " " + specificElem[1] + " is " + specificElem[2];
-//alert(specificElem[0] + " / " + specificElem[2] + " / " + specificElem[1]);
+
+//=== create 6 objects from class code: each will hold properties of each Block boxes assigned to grid column locations
 var commonElem = ["a", "b", "c"];
-var specificElem = ["Game Type", "aqua", 1, "a1", "title1", "area1"];
+var specificElem = ["Game Type", "aqua", 1, "a1", "title1"];
      area1 = new SpecificGridElements(commonElem, specificElem)
-var specificElem = ["Game Style", "red", 2, "a2", "title2", "area2"];
-     area2 = new SpecificGridElements(commonElem, specificElem);    
-var specificElem = ["Group Size", "rgb(171, 240, 171)", 3, "a1", "title3", "area3"];
+     area1.addareax(area1);
+var specificElem = ["Game Style", "red", 2, "a2", "title2"];
+     area2 = new SpecificGridElements(commonElem, specificElem);  
+     area2.addareax(area2);  
+var specificElem = ["Group Size", "rgb(171, 240, 171)", 3, "a1", "title3"];
      area3 = new SpecificGridElements(commonElem, specificElem)
-var specificElem = ["When Available", "rgba(0 ,0 , 255, 0.438)", 4, "a4", "title4", "area4"];
-     area4 = new SpecificGridElements(commonElem, specificElem);  
-var specificElem = ["Hold 1", "purple", 5, "a5", "title5", "area5"];
+     area3.addareax(area3);
+var specificElem = ["When Available", "rgba(0 ,0 , 255, 0.438)", 4, "a4", "title4"];
+     area4 = new SpecificGridElements(commonElem, specificElem); 
+     area4.addareax(area4);
+var specificElem = ["Hold 1", "purple", 5, "a5", "title5"];
      area5 = new SpecificGridElements(commonElem, specificElem)
-var specificElem = ["Hold 2", "peru", 6, "a6", "title6", "area6"];
-     area6 = new SpecificGridElements(commonElem, specificElem);      
+     area5.addareax(area5);
+var specificElem = ["Hold 2", "peru", 6, "a6", "title6"];
+     area6 = new SpecificGridElements(commonElem, specificElem);  
+     area6.addareax(area6);    
   // area1.setInitProperties();
 }
 
