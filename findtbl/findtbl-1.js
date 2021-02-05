@@ -4,6 +4,7 @@ var area3;
 var area4;
 var area5;
 var area6;
+var boxObjsArray = [];
 class CommonGridElements
 {
     constructor(commonElemArray)
@@ -30,9 +31,10 @@ class SpecificGridElements extends CommonGridElements
         this.presentposition = specificElemArray[2];   
         this.ID = specificElemArray[3];
         this.pID = specificElemArray[4];
-        this.createdObj; //= specificElemArray[5];
+        //this.arrayOfBoxObjs = specificElemArray[5];
+        
         //alert(typeof specificElemArray[5]);
-        //alert(typeof this.createdObj);
+       // alert(this.specificElemArray[5]);
         var elem = document.getElementById(this.ID);
         var elemTitle = document.getElementById(this.pID);
         elem.style.backgroundColor = this.backgndcolor; 
@@ -51,7 +53,7 @@ class SpecificGridElements extends CommonGridElements
       // alert(area + " / " + typeof area);
       this.SEArray.push(area);
       this.createdObj = this.SEArray[5];
-      alert("createdObj = " + this.createdObj);
+     // alert("createdObj = " + this.createdObj);
     }
     
     setInitProperties(id)
@@ -66,6 +68,35 @@ class SpecificGridElements extends CommonGridElements
         //var elem = document.getElementById(ID);
         //elem.style.innerHTML = "HELLO";
     }
+
+   rtnSEArray()
+    {
+        return this.SEArray;
+    }
+
+     morphUp(pastedspecificElemArray)                 //pastedposition, pastedPropertiesArray)
+    {
+       alert("in morph @ position =  " + this.presentposition) ;//+ pastedposition + "  /  " + pastedPropertiesArray);
+       alert( "specificElemArray from the lower calling box = " +  pastedspecificElemArray);
+       this.title = pastedspecificElemArray[0];  //?????
+       this.backgroundColor = pastedspecificElemArray[1];  //?????????????
+       
+    }
+
+    //moveUp(boxObjonehigher)
+   // {
+      //alert("pasted parameter = " + boxObjonehigher);
+      //alert("in moveUp(),.....  present position = " +  this.presentposition);
+      //boxObjonehigher.morph();
+       //upOneposition =  this.presentposition -1;
+       
+       //alert(typeof arrayOfBoxObjs[upOneposition]);
+      // arrayOfBoxObjs[upOneposition].morph();
+      //var areax = "area" + position;
+       //area1.morph(); //position, this.SEArray);
+
+   // }
+
     returnTitle()
     {
         //alert("in fcn returnTitle()"  + " / " + this.SEArray );    
@@ -74,36 +105,44 @@ class SpecificGridElements extends CommonGridElements
 
 }
 
-//===========================================================================
+//==========================================================================
+
 function FTpg1Run()
 {
-    //alert("FTpg1Run()");
+    //alert("FTpg1Run()");    
     currentFindTblpage = 1;
     objNAVfindtblpg1.style.display = "flex";
     
 fatCreateButtons();
 
 //=== create 6 objects from class code: each will hold properties of each Block boxes assigned to grid column locations
+boxObjsArray = ["abc"];
 var commonElem = ["a", "b", "c"];
-var specificElem = ["Game Type", "aqua", 1, "a1", "title1"];
-     area1 = new SpecificGridElements(commonElem, specificElem)
+var specificElem = ["Game Type", "aqua", 1, "a1", "title1" ] ;   //, boxObjsArray];
+     area1 = new SpecificGridElements(commonElem, specificElem);
+     boxObjsArray.push(area1);
      area1.addareax(area1);
-var specificElem = ["Game Style", "red", 2, "a2", "title2"];
+var specificElem = ["Game Style", "red", 2, "a2", "title2"];   //, boxObjsArray];
      area2 = new SpecificGridElements(commonElem, specificElem);  
+     boxObjsArray.push(area2);   
      area2.addareax(area2);  
-var specificElem = ["Group Size", "rgb(171, 240, 171)", 3, "a1", "title3"];
-     area3 = new SpecificGridElements(commonElem, specificElem)
+var specificElem = ["Group Size", "rgb(171, 240, 171)", 3, "a3", "title3"];   //, boxObjsArray];
+     area3 = new SpecificGridElements(commonElem, specificElem);
+     boxObjsArray.push(area3);
      area3.addareax(area3);
-var specificElem = ["When Available", "rgba(0 ,0 , 255, 0.438)", 4, "a4", "title4"];
+var specificElem = ["When Available", "rgba(0 ,0 , 255, 0.438)", 4, "a4", "title4"];   //, boxObjsArray];
      area4 = new SpecificGridElements(commonElem, specificElem); 
+     boxObjsArray.push(area4);
      area4.addareax(area4);
-var specificElem = ["Hold 1", "purple", 5, "a5", "title5"];
-     area5 = new SpecificGridElements(commonElem, specificElem)
+var specificElem = ["Hold 1", "purple", 5, "a5", "title5"];   //, boxObjsArray];
+     area5 = new SpecificGridElements(commonElem, specificElem);
+     boxObjsArray.push(area5);
      area5.addareax(area5);
-var specificElem = ["Hold 2", "peru", 6, "a6", "title6"];
+var specificElem = ["Hold 2", "peru", 6, "a6", "title6"];    ///, boxObjsArray];
      area6 = new SpecificGridElements(commonElem, specificElem);  
+     boxObjsArray.push(area6);
      area6.addareax(area6);    
-  // area1.setInitProperties();
+    // alert(boxObjsArray);
 }
 
 function fatCreateButtons()
@@ -191,9 +230,11 @@ function fatCreateButtons()
   }
 
   function fatEventUP()
-  {
-      alert("fatEventUP clicked id =  " + this.id);
+  {  
+    arrayIndex = parseInt(this.id[5],10);
+    boxObjsArray[arrayIndex -1].morphUp(boxObjsArray[arrayIndex].rtnSEArray());
   }
+
   function fatEventDWN()
   {   
     var parentDiv = this.parentNode;
@@ -226,3 +267,5 @@ function flexboxClked()
    // alert("flexbox clicked" + "/ " + this.id);
     this.style.backgroundColor = "white";
 }
+
+
