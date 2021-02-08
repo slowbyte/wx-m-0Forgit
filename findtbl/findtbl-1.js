@@ -23,7 +23,7 @@ class CommonGridElements
 class SpecificGridElements extends CommonGridElements
 {
     constructor(commonElemArray, specificElemArray)
-    {
+    {      
         super(commonElemArray);
         this.SEArray = specificElemArray;
         this.title = specificElemArray[0];
@@ -32,20 +32,15 @@ class SpecificGridElements extends CommonGridElements
         this.ID = specificElemArray[3];
         this.pID = specificElemArray[4];
         //this.arrayOfBoxObjs = specificElemArray[5];
-        
+         this.thisArray = [this.title, this.backgndcolor, this.presentposition, this.ID, this.pID]
+         ////alert("Constructor...thisArray = " + this.thisArray);
         //alert(typeof specificElemArray[5]);
        // alert(this.specificElemArray[5]);
         var elem = document.getElementById(this.ID);
         var elemTitle = document.getElementById(this.pID);
         elem.style.backgroundColor = this.backgndcolor; 
-        elemTitle.innerHTML = this.title;        
-
-        var i = 0;
-        for( i = 0; i < specificElemArray.length; i++)
-        {
-           // alert("i = " + i + " / " + specificElemArray[i]);
-        }     
-       // this.setInitProperties();   
+        elemTitle.innerHTML = this.title;  
+        //this.setInitProperties(this.ID);      //works ok
     }
 
     addareax(area)
@@ -58,6 +53,8 @@ class SpecificGridElements extends CommonGridElements
     
     setInitProperties(id)
     {
+      alert("in setInitProperties");
+      return;
         //CHANGE BKGROUND COLOR OF a2 obj
        // var newid = "a" + 2;
         var someBlock = document.getElementById(id);
@@ -74,35 +71,66 @@ class SpecificGridElements extends CommonGridElements
         return this.SEArray;
     }
 
-     morphUp(pastedspecificElemArray)                 //pastedposition, pastedPropertiesArray)
+    I_have_been_Replaced(upperBGcolor, upperTitle)
     {
-       alert("in morph @ position =  " + this.presentposition) ;//+ pastedposition + "  /  " + pastedPropertiesArray);
-       alert( "specificElemArray from the lower calling box = " +  pastedspecificElemArray);
-       this.title = pastedspecificElemArray[0];  //?????
-       this.backgroundColor = pastedspecificElemArray[1];  //?????????????
-       
+     //alert("in REPLACED  "  + upperBGcolor + "  " + upperTitle);   ////  this.ID = " + this.ID + "this.pID = " + this.pID);
+     // alert(this.presentposition + 1);
+    var lowerID = boxObjsArray[this.presentposition + 1].ID;   //.rtnSEArray());
+    //alert(document.getElementById(this.ID).style.backgroundColor);
+    //alert(document.getElementById(lowerID).style.backgroundColor);
+    var lowerpID =  boxObjsArray[this.presentposition + 1].pID
+     document.getElementById(lowerID).style.backgroundColor = upperBGcolor;
+     document.getElementById(lowerpID).innerHTML = upperTitle;
+     return;
+      var A1 = document.getElementById(this.ID);
+       var A2 = document.getElementById(this.pID);
+       A1.style.backgroundColor = replaceSEArray[1];
+       this.backgndcolor = replaceSEArray[1];
+       A2.innerHTML = replaceSEArray[0]; 
+       this.title =  replaceSEArray[0];  
+       this.SEArray[0] = this.title;  
+       this.SEArray[1] = this.backgndcolor;   
     }
 
-    //moveUp(boxObjonehigher)
-   // {
-      //alert("pasted parameter = " + boxObjonehigher);
-      //alert("in moveUp(),.....  present position = " +  this.presentposition);
-      //boxObjonehigher.morph();
-       //upOneposition =  this.presentposition -1;
-       
-       //alert(typeof arrayOfBoxObjs[upOneposition]);
-      // arrayOfBoxObjs[upOneposition].morph();
-      //var areax = "area" + position;
-       //area1.morph(); //position, this.SEArray);
-
-   // }
-
-    returnTitle()
+     morphUp(pastedspecificElemArray)  
     {
-        //alert("in fcn returnTitle()"  + " / " + this.SEArray );    
-        return this.SEArray; 
+      var upBGcolor = this.backgndcolor;
+      var upTitle = this.title;
+     // alert(upBGcolor + "   " + upTitle);
+     //  alert("in morphUp @ position =  " + this.presentposition) ;//+ pastedposition + "  /  " + pastedPropertiesArray);
+       //alert( "morphUP1");  //...specificElemArray from the calling box = " +  pastedspecificElemArray);
+       var startingSEArray = this.SEArray;
+       //alert("morpUp startingSEArray = " + startingSEArray);
+       this.title = pastedspecificElemArray[0];  
+       var A1 = document.getElementById(this.ID);
+       var A2 = document.getElementById(this.pID);
+       A1.style.backgroundColor = pastedspecificElemArray[1];
+       this.backgndcolor = pastedspecificElemArray[1];
+       A2.innerHTML = pastedspecificElemArray[0]; 
+       this.title = pastedspecificElemArray[0];  
+       this.SEArray[0] = this.title;  
+       this.SEArray[1] = this.backgndcolor;   
+       //alert("morphUp()2....  " ); //+ startingSEArray);    
+       this.I_have_been_Replaced(upBGcolor, upTitle);
+      // alert("morphUp3 last line");
     }
 
+    morphDwn(pastedspecificDwnElemArray)  
+    {
+       //alert("in morph @ position =  " + this.presentposition) ;//+ pastedposition + "  /  " + pastedPropertiesArray);
+       alert( "MORPHdwn..specificElemArray from the calling box = " +  pastedspecificDwnElemArray);
+
+       this.title = pastedspecificDwnElemArray[0];  
+       var A1 = document.getElementById(this.ID);
+       var A2 = document.getElementById(this.pID);
+       A1.style.backgroundColor = pastedspecificDwnElemArray[1];
+       this.backgndcolor = pastedspecificDwnElemArray[1];
+       A2.innerHTML = pastedspecificDwnElemArray[0]; 
+       this.title = pastedspecificDwnElemArray[0];  
+       this.SEArray[0] = this.title;  
+       this.SEArray[1] = this.backgndcolor;   
+       alert("end of CALLED morphDwn()....  " + this.SEArray)    
+    }
 }
 
 //==========================================================================
@@ -164,9 +192,12 @@ function fatCreateButtons()
     buttonU.style.marginLeft = "310px";
     buttonU.style.marginBottom = "10px";
     buttonU.addEventListener("click", fatEventUP);
-
     var idStr = "a" + i;
     //alert("idStr = " + idStr);
+    if(i== 1)
+    {
+      buttonU.style.visibility = "hidden";
+    }
     var appendTo = document.getElementById(idStr);
     //alert("appendTo = " + appendTo);
     appendTo.appendChild(buttonU);
@@ -186,9 +217,12 @@ function fatCreateButtons()
     buttonD.style.marginLeft = "310px";
     buttonD.style.marginBottom = "10px";
     buttonD.addEventListener("click", fatEventDWN);
-
     var idStr = "a" + i;
     //alert("idStr = " + idStr);
+    if(i== 6)
+    {
+      buttonD.style.visibility = "hidden";
+    }
     var appendTo = document.getElementById(idStr);
     //alert("appendTo = " + appendTo);
     appendTo.appendChild(buttonD);
@@ -205,22 +239,22 @@ function fatCreateButtons()
       switch(idNum)
        {         
         case 1:
-          rtn = area1.returnTitle();
+          rtn = area1.rtnSEArray();
           break;
         case 2:
-          rtn = area2.returnTitle();
+          rtn = area2.rtnSEArray();
           break;
           case 3:
-            rtn = area3.returnTitle();
+            rtn = area3.rtnSEArray();
           break;
         case 4:
-            rtn = area4.returnTitle();
+            rtn = area4.rtnSEArray();
           break;
           case 5:
-            rtn = area5.returnTitle();
+            rtn = area5.rtnSEArray();
           break;
         case 6:
-            rtn = area6.returnTitle();
+            rtn = area6.rtnSEArray();
           break;
 
         default:
@@ -231,16 +265,18 @@ function fatCreateButtons()
 
   function fatEventUP()
   {  
-    arrayIndex = parseInt(this.id[5],10);
+    var arrayIndex = parseInt(this.id[5],10);
     boxObjsArray[arrayIndex -1].morphUp(boxObjsArray[arrayIndex].rtnSEArray());
   }
 
   function fatEventDWN()
   {   
-    var parentDiv = this.parentNode;
-    var id = parentDiv.getAttribute("id");
-      //alert("button parent id = " +id);
-     alert("fatEventDWN clicked id? =  " + this.id );
+   // alert("fatEventDWN clicked id? =  " + this.id );
+    //var parentDiv = this.parentNode;
+   // var id = parentDiv.getAttribute("id");
+    var arrayIndex = parseInt(this.id[6],10);
+    boxObjsArray[arrayIndex + 1].morphDwn(boxObjsArray[arrayIndex].rtnSEArray());
+
   }
 
 
