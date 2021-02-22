@@ -2,7 +2,7 @@
 function adminstuffclicked( )
 {
    displayDropbox(true);
-   //no changesszzzfff
+   //no changes
 }
 
 function displayDropbox($true_false)
