@@ -42,6 +42,7 @@ function passPHP( justLoggedIn)
 function createLoginButtons()
 {
  //alert("createLoginButtons_1");
+ console.log("hello ronzo");
 //CREATE LOGIN SUBMIT BUTTON
 //============================
 button = (document.createElement("BUTTON"));
