@@ -7,7 +7,7 @@ include_once "index/destroysession.php";
 include_once 'mysqlpdo/includes/dbh.inc.php';
 include_once 'mysqlpdo/includes/user.inc.php';
 destroySession();
-
+//phpinfo();
  session_start();
  $_SESSION["username"] = "none";
  $ID = session_id();

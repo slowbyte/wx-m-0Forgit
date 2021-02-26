@@ -36,19 +36,22 @@ class DbnSi
       }
    }
 }
+
 //====================== END of CLASS DbnSi ================================================================
 
 //BEGIN CLASS SIGNIN =============================================================================   
 class Signin extends DbnSi
 {
     public function Tbls2Signin($values)
-    {              
-        //$sql = "Select * From tblprofilepg1  join tblprofilepg2 on tblprofilepg1.username=tblprofilepg2.username Where tblprofilepg1.username='slowbyte' ";       
-         $sql = "Select * From $values[6] left join $values[7] on $values[6].username = $values[7].usernamelc Where $values[6].usernameorig = '$values[3]' ";     
-        $stmt = $this->connect($values)->query($sql) ;
-        $row = $stmt->fetch();     
- 
-        return $row;
+    {      $sql = " Select * From tblProfilePg1 WHERE username = '$values[3]'  ";  
+         //$sql = " select firstname from tblprofilepg1 where userID = '1000' ";// Where tblprofilepg1.username='slowbyte' ";
+        //////$sql = "Select * From tblprofilepg1  join tblprofilepg2 on tblprofilepg1.username=tblprofilepg2.username Where tblprofilepg1.username='slowbyte' ";       
+         //$sql = "Select * From $values[6] left join $values[7] on $values[6].username = $values[7].usernamelc Where $values[6].usernameorig = '$values[3]' ";     
+          $stmt = $this->connect($values)->query($sql) ;
+          $row = $stmt->fetch();     
+          //$row = $this->connect($values);
+          return $row;
+        //return $values[3];
     }
 
     public function lastLoginloginCountUpdate($values)  
@@ -123,7 +126,7 @@ function loginOnly($values, $blank)
 {
  $obj = new Signin;
  return $obj->Tbls2Signin($values);
- ////return "fuck ron";
+ //return "fuck ron";
 }
 //============= END loginOnly($values, $blank) =================================
 
