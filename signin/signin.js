@@ -934,7 +934,7 @@ function Signin4BothTables()
  setTimeout(function()
    {       
      retn2Tbls = Loginajax($dbValues);
-     alert("retn2Tbls = " + JSON.stringify(retn2Tbls));
+     //alert("retn2Tbls = " + JSON.stringify(retn2Tbls));
      for(var j = 0; j < sizeOfExpectedRetn;  j++)
      {         
            //datax = datax + ", " +pp1rtnSQL[j];      
