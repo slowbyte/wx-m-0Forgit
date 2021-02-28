@@ -2,6 +2,7 @@
 // BEGIN PRIMARY FUNCTIONS FOR LOADING PAGE PP2 ===========================
 function PP2Run()
 {
+    //alert("PP2PDBD = " + PP2LastDBdata);
     //alert("in PP2Run()");
     objNAVnvpp1form.style.display = "none";    
     objNAVnvpp3form.style.display = "none";
@@ -328,7 +329,7 @@ function PP2Update($dataStr, keys, newData)
        //need some kind of chk for success!
    if(pp2rtnUpdate == "success")
    {    
-        //alert("Success & LBtn is Pushed = " + lastProfileButtonPushed );
+        alert("Success & LBtn is Pushed = " + lastProfileButtonPushed );
      
        //Update PP2LastDBdata with just the changes made to the database...
        alert("--- " + PP2LastDBdata);
@@ -361,6 +362,7 @@ function PP2Update($dataStr, keys, newData)
 
        else //UPDATE FAILED...
        {  
+          alert("PP2 Update FAILED");
         //alert(pp2rtnUpdate);
         //Display Error that email is not available...
         document.getElementById('PP2ErrorBox').style.display = "none";
