@@ -46,7 +46,7 @@ class Signin extends DbnSi
     public function Tbls2Signin($values)
     {              
         //$sql = "Select * From tblprofilepg1  join tblprofilepg2 on tblprofilepg1.username=tblprofilepg2.username Where tblprofilepg1.username='slowbyte' ";       
-         $sql = "Select * From $values[6] left join $values[7] on $values[6].username = $values[7].usernamelc Where $values[6].usernameorig = '$values[3]' ";     
+         $sql = "Select * From $values[6] left join $values[7] on $values[6].username = $values[7].usernamelc Where $values[6].usernameorig = BINARY '$values[3]' ";     
         $stmt = $this->connect($values)->query($sql) ;
         $row = $stmt->fetch();     
  
