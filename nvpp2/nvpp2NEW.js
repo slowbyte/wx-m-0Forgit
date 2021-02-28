@@ -310,6 +310,7 @@ function PP2Update($dataStr, keys, newData)
       var dbUser = "root";
       var dbPwd = "slowbyte1";
       var loggedUser = PP123LastDBdata[9];
+      //alert(loggedUser);
       var dbName = "cf1";
       var funcName =  "pp2UPDATEwrite";       
       var dBtable = "tblProfilePg1"; 
@@ -317,19 +318,19 @@ function PP2Update($dataStr, keys, newData)
       //alert("dbValuesToInsert:   "  + dbValuesToInsert);
      
      $dbValues = [dbHost, dbUser, dbPwd, loggedUser, dbName, funcName, username.toLowerCase(), dbValuesToInsert, dBtable]; 
-    // alert("dbValues = " + $dbValues);
+     //alert("dbValues = " + $dbValues);
 
      setTimeout(function()
     {     
        pp2rtnUpdate = PP2ajax($dbValues);
-      // alert(pp2rtnUpdate)
+       //alert("What DBase Returned = " + pp2rtnUpdate)
       
 
       //SUCCESS CODE BEGINS ========================================================================
        //need some kind of chk for success!
    if(pp2rtnUpdate == "success")
    {    
-        alert("Success & LBtn is Pushed = " + lastProfileButtonPushed );
+        //alert("Success & LBtn is Pushed = " + lastProfileButtonPushed );
      
        //Update PP2LastDBdata with just the changes made to the database...
        alert("--- " + PP2LastDBdata);
