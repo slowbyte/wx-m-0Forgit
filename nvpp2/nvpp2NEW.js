@@ -363,7 +363,7 @@ function PP2Update($dataStr, keys, newData)
 
        else //UPDATE FAILED...
        {  
-          alert("PP2 Update FAILED");
+        //alert("PP2 Update FAILED");
         //alert(pp2rtnUpdate);
         //Display Error that email is not available...
         document.getElementById('PP2ErrorBox').style.display = "none";
