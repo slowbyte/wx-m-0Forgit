@@ -674,9 +674,10 @@ function signinUPDATEtblprofilepg1(row)  // this function is to update the last 
     var funcName = "signinUPDATEwrite";
     var dBtable = "tblProfilePg1";
     var dbValuesToInsert = $dataStr; 
-
+    
+    //alert("new count = " + newCount),
     $dbValues = [dbHost, dbUser, dbPwd, loggedUser, dbName, funcName, dbValuesToInsert, dBtable];
-    //alert("Update dbValues = " + $dbValues);
+    //alert("Update dbValues used for datelogin = " + $dbValues);
   
     setTimeout(function () 
     {
