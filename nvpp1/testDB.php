@@ -1,7 +1,9 @@
 <?php 
 if ((session_status() == PHP_SESSION_NONE))
 {    
+
    session_start();
+   
 }
 
 $ID2 = session_id();
